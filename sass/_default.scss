@@ -49,7 +49,7 @@ body {
 header {
     position: relative;
     // overflow: hidden;
-    height: 100vh;
+    height: min(100dvh, 800px);
 }
 
 
@@ -67,6 +67,7 @@ header {
 
         display: grid;
         gap: rem(40px);
+        margin-top: rem(10px);
     }
 
     &__intro-text {
