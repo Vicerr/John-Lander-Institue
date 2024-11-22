@@ -32,51 +32,119 @@
 
 <body>
   <header class="hero-header">
- <nav>
- <div class="wrapper container">
-   <a href="" class="logo"><img src="/assets/logo/logo.png" alt=""></a>
-      <ul class="nav-items">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#contact">Programs</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Media</a></li>
-        <li><a href="#contact">Media</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+    <nav data-navigation>
+      <div class="wrapper container">
+        <a href="" class="logo"><img src="/assets/logo/logo.png" alt=""></a>
+        <ul class="nav-items" data-searchbar-opened="false">
+          <li><a href="#home">Home</a></li>
+          <li class="link-dropdown-parent"><a href="#contact"><span>Program</span>
+              <span>
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.7917 1.33278L6.94996 5.61974C6.49625 6.12602 5.75383 6.12602 5.30013 5.61974L1.45837 1.33278"
+                    stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
-      </ul>
- </div>
-    </nav>   
+              </span>
+            </a>
+            <ul class="dropdown">
+              <li><a href="">Courses</a></li>
+              <li><a href="">Reserach</a></li>
+              <li><a href="">Intenship</a></li>
+            </ul>
+          </li>
+          <li><a href="#about">About Us</a></li>
+
+          <li class="link-dropdown-parent"><a href="#contact"><span>Media</span>
+              <span>
+                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.7917 1.33278L6.94996 5.61974C6.49625 6.12602 5.75383 6.12602 5.30013 5.61974L1.45837 1.33278"
+                    stroke-width="1.33333" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+              </span>
+            </a>
+            <ul class="dropdown">
+              <li><a href="">Events/News</a></li>
+              <li><a href="">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+          <li class="keep">
+            <form action="" aria-expanded="true" class="search-bar">
+              <button type="submit" class="input-search-btn">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12.625 21C7.37829 21 3.125 16.7467 3.125 11.5C3.125 6.25329 7.37829 2 12.625 2C17.8717 2 22.125 6.25329 22.125 11.5C22.125 16.7467 17.8717 21 12.625 21Z"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M2.125 22L4.125 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+
+              <input type="text" placeholder="search">
+
+            </form>
+          </li>
+          <li data-toggle-searchbar="open">
+            <button aria-label=" open search bar">
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.625 21C7.37829 21 3.125 16.7467 3.125 11.5C3.125 6.25329 7.37829 2 12.625 2C17.8717 2 22.125 6.25329 22.125 11.5C22.125 16.7467 17.8717 21 12.625 21Z"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M2.125 22L4.125 20" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </li>
+          <li class="keep" data-toggle-searchbar="close">
+            <button>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 21L20.9706 4.02944" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 4L20.9706 20.9706" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
     <section class="hero hero__section container">
       <div class="hero__intro-text">
         <p class="hero__header">Shaping the Future of Energy <br> and Petroleum Professionals
         </p>
-        <p class="hero__sub-header">Join a world-class institute committed to empowering industry leaders with cutting-edge training, certifications, and real-world expertise</p>
+        <p class="hero__sub-header">Join a world-class institute committed to empowering industry leaders with
+          cutting-edge training, certifications, and real-world expertise</p>
       </div>
       <div class="hero__call-to-action">
-        <a href="" class="cta-btn"><span> Explore Programs</span><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.93 5.92999L21 12L14.93 18.07" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 12H20.83" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <a href="" class="cta-btn"><span> Explore Programs</span><svg width="25" height="24" viewBox="0 0 25 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.93 5.92999L21 12L14.93 18.07" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20.83" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </a>
-        <a href="" class="cta-btn cta-btn-alt"><span>About Us</span><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M14.93 5.92999L21 12L14.93 18.07" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-            <path d="M4 12H20.83" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+        <a href="" class="cta-btn cta-btn-alt"><span>About Us</span><svg width="25" height="24" viewBox="0 0 25 24"
+            fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.93 5.92999L21 12L14.93 18.07" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+              stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M4 12H20.83" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+              stroke-linejoin="round" />
           </svg>
         </a>
       </div>
       <div class="hero__misc">
-       <div class="hero__misc-box">
-         <p class="numbered-identity">10k+</p>
-        <p class="descriptive-identity">Trained <br>Professionals</p>
-       </div>
-       <div class="hero__misc-box">
-         <p class="numbered-identity">50+</p>
-        <p class="descriptive-identity">industry <br> Partnership</p>
-       </div>
-       <div class="hero__misc-box">
-         <p class="numbered-identity">95%</p>
-        <p class="descriptive-identity">Job Placement <br> Rate</p>
-       </div>
+        <div class="hero__misc-box">
+          <p class="numbered-identity">10k+</p>
+          <p class="descriptive-identity">Trained <br>Professionals</p>
+        </div>
+        <div class="hero__misc-box">
+          <p class="numbered-identity">50+</p>
+          <p class="descriptive-identity">industry <br> Partnership</p>
+        </div>
+        <div class="hero__misc-box">
+          <p class="numbered-identity">95%</p>
+          <p class="descriptive-identity">Job Placement <br> Rate</p>
+        </div>
       </div>
     </section>
 
@@ -87,7 +155,7 @@
         <img src="/assets/images/heroimg (2).jpg" alt="Image 2">
         <img src="/assets/images/heroimg (3).jpg" alt="Image 3">
         <img src="/assets/images/heroimg (4).jpg" alt="Image 4">
-       
+
       </div>
 
     </div>
@@ -96,8 +164,111 @@
       <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
     </div>
   </header>
+  <section class="collaboration__section container-fluid">
+    <h2 class="collaboration__header">Join 25+ collaboarating companies</h2>
+    <div class="collaboration__images-container">
+      <img src="/assets/images/fanaka-ByChdN_O 1.png" alt="collaborating company image 1" loading="lazy">
+      <img src="/assets/images/LafaaacLogo-D56QNAhV 1.png" alt="collaborating company image 1" loading="lazy">
+      <img src="/assets/images/Vector-1.png" alt="collaborating company image 1" loading="lazy">
+      <img src="/assets/images/Vector-2.png" alt="collaborating company image 1" loading="lazy">
+      <img src="/assets/images/Vector.png" alt="collaborating company image 1" loading="lazy">
+      <img src="/assets/images/wep-utg8ebN7 1.png" alt="collaborating company image 1" loading="lazy">
+    </div>
+  </section>
+  <section class="video__section">
+    <div class="video__content">
+      <div class="video__play-button">
+        <svg width="55" height="62" viewBox="0 0 55 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M52.5 35.3301C55.8333 33.4056 55.8333 28.5944 52.5 26.6699L7.5 0.68911C4.16667 -1.23539 0 1.17023 0 5.01923L0 56.9808C0 60.8298 4.16667 63.2354 7.5 61.3109L52.5 35.3301Z"
+            fill="white" />
+        </svg>
 
-  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit est accusamus aperiam optio eos numquam magnam. Delectus consequuntur autem adipisci natus animi dignissimos enim accusamus qui eum facere ad exercitationem repudiandae incidunt rerum earum, itaque voluptates illo quasi officiis aperiam saepe dolorem quos non? Alias, quidem. Error corporis recusandae saepe minus debitis repellendus eveniet, dolorum cupiditate sit exercitationem tempora ipsa ullam illo animi. Nulla aperiam at accusantium ratione sit aut tempore ad optio. Repellat, voluptatibus! Quasi fugit modi rerum reprehenderit corrupti! Esse ipsa nulla officia voluptates fugit, sit dignissimos quam earum, consequuntur enim quidem ratione ut illum laboriosam obcaecati molestiae in recusandae nam? Ut consequuntur incidunt similique voluptate! Aliquid laborum ratione doloribus nesciunt voluptates quisquam adipisci saepe, magni omnis nostrum est corporis placeat qui sequi dicta commodi vitae fuga aspernatur fugiat consectetur! Minima tempore eius optio laborum nobis illo doloribus, explicabo velit placeat fugit quas numquam ea dicta dolor nostrum deleniti quos illum architecto quae cumque, reprehenderit cum modi eaque facere. Dolor inventore minus eligendi repudiandae, sapiente ad libero modi laudantium perspiciatis in minima enim eveniet ab earum ea mollitia repellat? Facilis maiores minima, fugiat autem nobis corporis magni, suscipit debitis natus distinctio exercitationem hic tenetur quam ipsam fuga aliquam officiis necessitatibus deserunt commodi vero voluptate, pariatur labore ab! Nostrum facere assumenda quidem nemo, amet repellat laudantium itaque non eum magnam molestiae harum temporibus obcaecati explicabo, vel aliquid ullam dolor. Nemo odit ex eligendi corrupti in animi quo suscipit dolorem cumque dignissimos error officiis, maxime tempore quas sint itaque aperiam sit enim molestiae nulla reiciendis labore numquam sapiente obcaecati. Illum, temporibus tempora ullam, magnam doloremque sed, reiciendis similique quis qui ipsum amet ratione. Incidunt officiis error culpa laboriosam, nobis optio doloremque molestias laudantium atque eaque blanditiis. Blanditiis exercitationem pariatur, fuga aspernatur alias, earum enim obcaecati architecto possimus explicabo molestias non, nulla cum quas. Expedita, amet, non nemo dicta cum maiores, qui soluta illo praesentium a ipsam vero obcaecati molestiae quisquam cupiditate! Quidem consequatur, quaerat veniam error hic id sit. Dolorem sequi perspiciatis obcaecati rerum. Vitae, modi aliquid? Eum quas unde asperiores soluta consequatur. A, perspiciatis, ipsa perferendis fugit saepe et explicabo eum nobis aliquam fugiat in mollitia sed. Vel, laboriosam vitae dolorum molestias, expedita excepturi harum consequatur debitis libero incidunt error sit quisquam facere sequi? Eligendi dicta consectetur quia temporibus incidunt aliquid eaque ut sapiente at quas rerum perspiciatis non, iste rem voluptatum minima ducimus vel neque esse ex dignissimos! Consequuntur veniam repudiandae ab, provident dicta porro sunt tempore beatae modi placeat quis voluptates saepe corporis doloremque repellat. Placeat porro consequatur et similique blanditiis culpa iure sit odit, obcaecati, reprehenderit temporibus recusandae ea sapiente accusamus. Nulla, blanditiis quisquam? Mollitia tenetur ex eaque earum, porro magnam ratione neque provident aut amet? Ad deserunt laborum unde vero a doloribus. Sequi vero magnam natus voluptatibus quae distinctio iure tempore ducimus earum, amet unde minus ad repudiandae hic sunt ipsa velit porro dicta labore aliquam placeat nihil sed? Neque deserunt adipisci cum, ex nemo cupiditate distinctio, at iusto eum fugiat modi, facilis nam. Sequi maxime saepe quisquam molestias earum quam qui? Alias, voluptates inventore. Officiis voluptatum tenetur quod veniam magnam dolores velit soluta odio labore blanditiis. Necessitatibus pariatur facilis asperiores, fugit distinctio harum totam repudiandae eveniet similique quibusdam, itaque error. Necessitatibus reprehenderit ut eaque officiis quaerat ullam, dolores adipisci saepe fuga animi unde dolorem esse recusandae ratione tempore dolorum laudantium dolore voluptatibus nobis deserunt molestias totam, odio temporibus inventore. Nemo quisquam minima eligendi, blanditiis quas aliquid dolorum consequatur ipsum fugiat, in amet! Nam animi expedita perspiciatis quo sit, sint iusto minus cumque ipsum vero inventore sunt corrupti fuga explicabo in enim ratione id laborum doloremque possimus ullam unde nobis mollitia quae. Ex ullam sequi, pariatur repellendus, inventore eligendi saepe illo incidunt itaque, in fugiat odio reiciendis. Ea exercitationem, laboriosam et quam iure at quia molestias temporibus nobis architecto aperiam in delectus aspernatur porro optio illum ducimus repellendus maxime natus alias voluptatibus. Eligendi molestias blanditiis dolorem culpa obcaecati dolor ut? Ex, quam expedita. Inventore consectetur ab rem recusandae dicta neque natus dolores aliquid minus accusamus beatae quos molestiae repellat quaerat, facilis perspiciatis quasi reprehenderit fugit consequuntur at voluptatibus cum ea, sapiente deleniti. Aut error architecto facere at nobis, vitae rerum, ducimus, soluta odio nemo animi ut? Iusto quis nulla voluptates perferendis fuga, eaque odit totam commodi vel et quidem voluptate voluptatibus, quisquam consectetur quasi voluptatum? Excepturi libero architecto quaerat. Harum beatae incidunt nam eveniet totam exercitationem necessitatibus animi placeat corrupti reprehenderit enim repellat quis, dicta debitis mollitia fugiat adipisci soluta natus quas eos cum quisquam illo? Aperiam nesciunt sed est, laboriosam impedit exercitationem reprehenderit blanditiis beatae sequi tempora porro ratione soluta deleniti facere quod necessitatibus molestias eius ea architecto! Aut consequuntur atque incidunt et molestias nemo odit. Voluptate quod labore consequatur. Mollitia a laudantium, culpa exercitationem voluptas nihil. Pariatur veritatis sed optio blanditiis nihil itaque unde eum labore at quasi! Ut, omnis. Eveniet sint dignissimos debitis natus, doloremque corrupti, magnam nostrum culpa ipsa illum, porro quaerat adipisci harum enim qui id? Autem quaerat delectus necessitatibus vel consectetur. Provident doloremque distinctio ab error dolore obcaecati facere in id, et suscipit recusandae aspernatur vitae dignissimos quo impedit deleniti iusto voluptatum quisquam quae qui! Rerum quae, voluptatem distinctio id voluptates eveniet iure, aut aperiam ipsa tempora laudantium debitis adipisci totam dolorem natus dolore quis accusantium ad quibusdam sapiente saepe? Quis delectus repellendus deleniti officia sequi quia nisi? Vero odit officiis fugiat animi sequi eaque maxime nam voluptate quos qui, quia laborum magnam voluptatem quasi minima debitis! Libero nobis suscipit rem itaque, possimus voluptas aliquid. Praesentium sequi consequuntur eaque numquam amet sapiente nesciunt error vitae corporis eos deserunt soluta ab ad vel nostrum ducimus quasi, vero aliquid ratione dolorem laudantium atque. Obcaecati harum adipisci optio nulla, vel ipsum voluptates magni alias ea aspernatur placeat fugit nesciunt in mollitia error enim esse laudantium incidunt veritatis autem quasi, praesentium eius! Adipisci neque voluptatem veniam, possimus iste alias numquam expedita quo quidem nobis commodi voluptatibus eveniet rerum reprehenderit pariatur laboriosam fugit tempore, nostrum reiciendis cumque. Maiores, eveniet dolor! Facere laboriosam debitis cumque.</p>
+      </div>
+      <div class="video__texts-container">
+        <h2 class="video__header">Shaping the Future of Energy Professionals</h2>
+        <p class="video__text">At John Lander Energy Institute, we are committed to empowering individuals with the
+          skills, knowledge, and
+          certifications needed to thrive in the energy and petroleum industries</p>
+        <a href="" class="cta"><span>About Us</span> <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.93 5.92999L21 12L14.93 18.07" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12H20.83" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="features__section ">
+    <div class="features__section container-fluid">
+      <h2 class="features__header">
+        Leading the Way in Energy Education <br> and Career Advancement
+      </h2>
+      <div class="features__texts-container">
+        <div class="features__card-container">
+          <div class="features__card">
+            <div class="features__card-icon"><svg width="49" height="49" viewBox="0 0 49 49" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M35.8687 11.48V12.96L28.7887 8.86C26.1087 7.32 22.3687 7.32 19.7087 8.86L12.6287 12.98V11.48C12.6287 6.98 15.0887 4.5 19.5887 4.5H28.9087C33.4087 4.5 35.8687 6.98 35.8687 11.48Z"
+                  fill="#4A4C4C" />
+                <path
+                  d="M35.9287 16.44L35.6487 16.3L32.9287 14.74L27.2887 11.48C25.5687 10.48 22.9287 10.48 21.2087 11.48L15.5687 14.72L12.8487 16.32L12.4887 16.5C8.98872 18.86 8.74872 19.3 8.74872 23.08V32.12C8.74872 35.9 8.98872 36.34 12.5687 38.76L21.2087 43.74C22.0687 44.26 23.1487 44.48 24.2487 44.48C25.3287 44.48 26.4287 44.24 27.2887 43.74L36.0087 38.7C39.5287 36.34 39.7487 35.92 39.7487 32.12V23.08C39.7487 19.3 39.5087 18.86 35.9287 16.44ZM29.8287 27.5L28.6087 29C28.4087 29.22 28.2687 29.64 28.2887 29.94L28.4087 31.86C28.4887 33.04 27.6487 33.64 26.5487 33.22L24.7687 32.5C24.4887 32.4 24.0287 32.4 23.7487 32.5L21.9687 33.2C20.8687 33.64 20.0287 33.02 20.1087 31.84L20.2287 29.92C20.2487 29.62 20.1087 29.2 19.9087 28.98L18.6687 27.5C17.9087 26.6 18.2487 25.6 19.3887 25.3L21.2487 24.82C21.5487 24.74 21.8887 24.46 22.0487 24.22L23.0887 22.62C23.7287 21.62 24.7487 21.62 25.4087 22.62L26.4487 24.22C26.6087 24.48 26.9687 24.74 27.2487 24.82L29.1087 25.3C30.2487 25.6 30.5887 26.6 29.8287 27.5Z"
+                  fill="#4A4C4C" />
+              </svg>
+            </div>
+            <div class="features__card-header">Industry-Recognized Certification</div>
+            <div class="features__card-description">Gain certifications that are globally recognized and highly valued
+              by employers in the energy sector</div>
+          </div>
+          <div class="features__card">
+            <div class="features__card-icon"><svg width="49" height="48" viewBox="0 0 49 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M39.1554 9.77999L27.4354 4.55999C25.7154 3.79999 23.1154 3.79999 21.3954 4.55999L9.67541 9.77999C6.71541 11.1 6.27541 12.9 6.27541 13.86C6.27541 14.82 6.71541 16.62 9.67541 17.94L21.3954 23.16C22.2554 23.54 23.3354 23.74 24.4154 23.74C25.4954 23.74 26.5754 23.54 27.4354 23.16L39.1554 17.94C42.1154 16.62 42.5554 14.82 42.5554 13.86C42.5554 12.9 42.1354 11.1 39.1554 9.77999Z"
+                  fill="#4A4C4C" />
+                <path
+                  d="M24.4154 34.08C23.6554 34.08 22.8954 33.92 22.1954 33.62L8.7154 27.62C6.65541 26.7 5.0554 24.24 5.0554 21.98C5.0554 21.16 5.7154 20.5 6.5354 20.5C7.3554 20.5 8.0154 21.16 8.0154 21.98C8.0154 23.06 8.9154 24.46 9.9154 24.9L23.3954 30.9C24.0354 31.18 24.7754 31.18 25.4154 30.9L38.8954 24.9C39.8954 24.46 40.7954 23.08 40.7954 21.98C40.7954 21.16 41.4554 20.5 42.2754 20.5C43.0954 20.5 43.7554 21.16 43.7554 21.98C43.7554 24.22 42.1554 26.7 40.0954 27.62L26.6154 33.62C25.9354 33.92 25.1754 34.08 24.4154 34.08Z"
+                  fill="#4A4C4C" />
+                <path
+                  d="M24.4154 44C23.6554 44 22.8954 43.84 22.1954 43.54L8.7154 37.54C6.4954 36.56 5.0554 34.34 5.0554 31.9C5.0554 31.08 5.7154 30.42 6.5354 30.42C7.3554 30.42 8.0154 31.08 8.0154 31.9C8.0154 33.16 8.7554 34.3 9.9154 34.82L23.3954 40.82C24.0354 41.1 24.7754 41.1 25.4154 40.82L38.8954 34.82C40.0354 34.32 40.7954 33.16 40.7954 31.9C40.7954 31.08 41.4554 30.42 42.2754 30.42C43.0954 30.42 43.7554 31.08 43.7554 31.9C43.7554 34.34 42.3154 36.54 40.0954 37.54L26.6154 43.54C25.9354 43.84 25.1754 44 24.4154 44Z"
+                  fill="#4A4C4C" />
+              </svg>
+            </div>
+            <div class="features__card-header">Hands-On Training</div>
+            <div class="features__card-description">Access state-of-the-art labs, simulations, and field training to
+              develop practical skills.</div>
+          </div>
+          <div class="features__card">
+            <div class="features__card-icon"><svg width="49" height="48" viewBox="0 0 49 48" fill="none"
+                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect x="1.91541" y="1" width="46" height="46" fill="url(#pattern0_61_129)" />
+                <defs>
+                  <pattern id="pattern0_61_129" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_61_129" transform="scale(0.015625)" />
+                  </pattern>
+                  <image id="image0_61_129" width="64" height="64"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAHYAAAB2AH6XKZyAAADT0lEQVR4nO3bv8scRRzH8dc+z5MQxITHp0oeQSNBzQ+jRo0mEhAlIIQUKjaiGNQ/wC4EQRSLoFioXQqtbBSEVLGQoEYEUdBYmSjaSIxdfgk2Eh+LGXjMeXu3tzu7c+fdG5Zld2e++5nP3szOzc4UKysrppm53AJyMzMgt4DczAzILSA3U29AceDgwS7vdztewjIWsSGev4JL+A1H8VNXgha6ulHkI9wxJM09uLMDLei+CuyokGaYQUnp2oAiUZpktGnAZmxMEGdjjNUKbRhwACfwC7YmiLc1xjoRYyclpQG78blVoSljz1k19ivsSxm4KevxHr7GQwniDWMPvsC7uL5psKYG7MFpPK/bxqvAC/g+aqhNEwOexGfY0kRAQ7bgFJ6uG6CuAS/iQ6yre+OErMX7eLVO5joGHMHbNfO2RYFXcHjUjKMW4hmhrz6uvC60R5UZxYDdQmvfaU9tRAocw96qGaoasCjU+bWja+qcNfgAS1USVzXgLdxSV1EGbsKbVRJWMeBBHGokJw/PqVAVqhjwjvGu92UUwttqIMMMeBT3pVCTifuxf1CCYQaM/F4dQ44MujjIgJvxcFotWXjEgAZ8kAHPmsy630uBp8ouDjLg8fRasvFE2YUyA5ZwVztasnC30Jn7D2UG7BtwbRKZVzKKVFbIne1pyUbf4fYyA25tUUgu+papzIDN7enIRt9XYZkBG0rOTzJ9y1RmQOPR1jFkfb+TZQasaVFILvqOZfyfXnW1mBmQW0BuyiZIHMMNCeL/2nP8Rs0YdfL1crHfya6nyIwdU18Fpt6ABeGPz8vS1PlJ4iJeWxA+eGzLLCYXO+ZMb+Fh+9S3ATMDcC63iIycmxO++53JrSQDZ3BoAZ9ie9weE6ajPaD7ecRt8xe+wcc4Lj70fxfyh7gdxXXCV+H9cdtl8tqLv3EWX+IkPsHl3kRlT/nPmOlkPF4S5gDuxb3CjO7FpHKbcwnf4VthMuUpXBiWqerP/ILwszkejwthitouYQ3Atri/TcnQU0L+wI9xOxv3p4XptCOvAaxbz1fwc9x6WcaNwiTnZWxy7QKJeaHbPe/aBRNXhe7pVasLKM7j9579+Zqa+1LMFk5OOTMDcgvIzcyA3AJyM/UG/AM5I26jZKLS+gAAAABJRU5ErkJggg==" />
+                </defs>
+              </svg>
+            </div>
+            <div class="features__card-header">Experienced Faculty</div>
+            <div class="features__card-description">Learn from industry veterans and experts with decades of real-world
+              experience</div>
+          </div>
+        </div>
+        <a href="" class="cta"><span>Learn More</span> <span><svg width="25" height="24" viewBox="0 0 25 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.93 5.92999L21 12L14.93 18.07" stroke="white" stroke-width="1.5" stroke-miterlimit="10"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 12H20.83" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg></span></a>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>

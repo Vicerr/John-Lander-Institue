@@ -31,3 +31,41 @@ header.addEventListener("mouseleave", startSliderAnimation)
 header.addEventListener("mouseenter", stopSliderAnimation)
 // start the animation intially
 startSliderAnimation()
+const nav = document.querySelector(".nav-items")
+// function openSearchBar(element) {
+//     // element.onclick = () => {
+//     // }
+//     element.addEventListener("click", () => {
+//         nav.dataset.searchbarOpened = "true"
+//     })
+// }
+// function closeSearchBar(element) {
+//     // element.onclick = () => {
+//     // }
+//     element.addEventListener("click", () => {
+//         nav.dataset.searchbarOpened = "false"
+//     })
+// }
+
+const toggleSearch = document.querySelectorAll(".nav-items [data-toggle-searchbar]")
+toggleSearch.forEach((element) => {
+    element.addEventListener("click", (e) => {
+        value = element.dataset.toggleSearchbar
+        if (value === "open") {
+            nav.dataset.searchbarOpened = "true"
+        }
+        if (value === "close") {
+            nav.dataset.searchbarOpened = "false"
+        }
+    })
+})
+
+const navigaion = document.querySelector("[data-navigation]")
+window.addEventListener("scroll", () => {
+    const hero = document.querySelector(".hero-header")
+    if (window.scrollY > hero.offsetHeight) {
+        navigaion.classList.add("scrolled")
+    } else {
+        navigaion.classList.remove("scrolled")
+    }
+})

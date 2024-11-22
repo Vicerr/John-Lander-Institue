@@ -3,10 +3,11 @@
 :root {
     --background-clr: #fff;
     --green: #0e8543;
-
+    --text-clr: #5d5f5f;
     --fs-hero-header: clamp(1.5rem, 2.376vw + 0.861rem, 3rem);
     --fs-hero-sub-header: clamp(1rem, 0.396vw + 0.894rem, 1.25rem);
     --fs-hero-btn: ;
+    --transition-duration: .3s;
 }
 
 *,
@@ -39,61 +40,18 @@ body {
     margin-inline: auto;
 }
 
+.container-fluid {
+    max-width: min(1332px, 90%);
+    // width: 84.16%;
+    margin-inline: auto;
+}
+
 header {
     position: relative;
     // overflow: hidden;
     height: 100vh;
 }
 
-nav {
-    --_link-clr: white;
-    --_link-padding: ;
-
-    .logo {
-        display: inline-block;
-        width: 40px;
-
-        img {
-            display: block;
-            width: 100%;
-        }
-    }
-
-    .wrapper {
-        display: flex;
-        width: 100%;
-        align-items: center;
-    }
-
-    * {
-        margin: 0;
-        padding: 0;
-    }
-
-
-    .nav-items {
-        font-size: 1rem;
-        font-weight: 500;
-        margin-left: auto;
-        list-style: none;
-        display: inline-flex;
-
-        a {
-            text-decoration: none;
-            padding: rem(20px);
-            display: inline-block;
-            color: var(--_link-clr);
-
-            &:hover {
-                color: var(--green);
-            }
-        }
-    }
-
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
 
 .hero {
     &__section {
