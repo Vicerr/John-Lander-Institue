@@ -93,3 +93,21 @@ open.addEventListener("click", () => {
     nav.classList.toggle("display-none")
     // console.log("click")
 })
+
+const course = document.querySelectorAll(".course-details [data-toggle-course-details]")
+course.forEach((element) => {
+    element.addEventListener("click", () => {
+        togg(element)
+    })
+})
+
+function togg(targetElement) {
+    const showElement = targetElement
+        .closest(".course-details__box")
+        .querySelector(".course-details__content")
+    if (showElement.getAttribute("aria-expanded") === "false") {
+        showElement.setAttribute("aria-expanded", "true")
+    } else {
+        showElement.setAttribute("aria-expanded", "false")
+    }
+}
