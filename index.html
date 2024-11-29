@@ -573,6 +573,21 @@
             </div>
         </div>
     </footer>
+    <script>
+        let currentIndex = 0
+        const slides = document.querySelector(".slides")
+        const slider = document.querySelector(".slider")
+        const images = slides.querySelectorAll("img")
+        const header = document.querySelector(".hero-header")
+
+
+        // continue slider when mouse leaves the screen
+        header.addEventListener("mouseleave", startSliderAnimation)
+        //stop slider when mouse hovers on the elements
+        header.addEventListener("mouseenter", stopSliderAnimation)
+        // start the animation intially
+        startSliderAnimation()
+    </script>
 </body>
 
 </html>

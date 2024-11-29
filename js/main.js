@@ -1,11 +1,4 @@
 // SLIDER ANIMATION ALGORITHIM
-
-// function to change the image slide when the user clicks on a button which activates this function
-let currentIndex = 0
-const slides = document.querySelector(".slides")
-const slider = document.querySelector(".slider")
-const images = slides.querySelectorAll("img")
-
 function changeSlide(direction) {
     const totalSlides = images.length
 
@@ -25,29 +18,9 @@ function startSliderAnimation() {
 function stopSliderAnimation() {
     clearInterval(slideInterval)
 }
-const header = document.querySelector(".hero-header")
+// function to change the image slide when the user clicks on a button which activates this function
 
-// continue slider when mouse leaves the screen
-header.addEventListener("mouseleave", startSliderAnimation)
-//stop slider when mouse hovers on the elements
-header.addEventListener("mouseenter", stopSliderAnimation)
-// start the animation intially
-startSliderAnimation()
 const nav = document.querySelector(".nav-items")
-// function openSearchBar(element) {
-//     // element.onclick = () => {
-//     // }
-//     element.addEventListener("click", () => {
-//         nav.dataset.searchbarOpened = "true"
-//     })
-// }
-// function closeSearchBar(element) {
-//     // element.onclick = () => {
-//     // }
-//     element.addEventListener("click", () => {
-//         nav.dataset.searchbarOpened = "false"
-//     })
-// }
 
 const toggleSearch = document.querySelectorAll(".nav-items [data-toggle-searchbar]")
 toggleSearch.forEach((element) => {

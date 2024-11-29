@@ -274,7 +274,7 @@ input {
 .contact-form input {
   --_border-clr: hsla(180, 1%, 52%, 1);
   padding: 1rem 1.25rem;
-  border-radius: 1.75rem;
+  border-radius: 0.75rem;
   outline: 0;
   border: 1px solid var(--_border-clr);
 }
@@ -318,14 +318,36 @@ input {
   display: grid;
   gap: 0.5rem;
 }
+.form-group.radio {
+  flex-direction: column;
+}
 .form-group.message input {
   min-height: 4rem;
 }
 
+.subform-group {
+  display: flex;
+}
+
+@media screen and (width > 600px) {
+  .short-input {
+    max-width: 200px;
+  }
+}
+
+.medium-input {
+  width: min(100%, 400px);
+}
+
+.has-sub-section {
+  display: flex;
+  justify-items: auto;
+  align-items: center;
+}
 .contact-misc {
   text-align: center;
   color: var(--text-clr);
-  margin-bottom: 4rem;
+  padding-block: 4rem;
 }
 .contact-misc p {
   font-size: 14px;
@@ -355,6 +377,95 @@ input {
 }
 .courses.page p {
   margin-bottom: 8px;
+}
+
+header:has(.internship) {
+  height: 100%;
+  position: relative;
+  background-color: hsl(180, 1%, 86%);
+}
+header:has(.internship) .hero__section {
+  top: 35%;
+  top: 0;
+  position: relative;
+  z-index: 1;
+  transform: translateY(-50%);
+  color: white;
+  font-size: clamp(1.5rem, 2.771vw + 0.783rem, 3rem);
+}
+@media screen and (width < 600px) {
+  header:has(.internship) .hero__section {
+    top: 50%;
+    text-align: center;
+  }
+}
+header:has(.internship) div.wrapper-misc {
+  width: min(70ch, 100%);
+  margin-inline: auto;
+}
+header:has(.internship) div.wrapper-misc h1 {
+  font-size: clamp(1.75rem, 4.157vw + 0.674rem, 4rem);
+  font-weight: 600;
+}
+header:has(.internship) nav {
+  background-color: white;
+  --_color: black;
+  --_svg-fill-clr: black;
+}
+
+.text-center {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header .content {
+  color: white;
+  position: relative;
+  bottom: 0;
+  height: 100%;
+}
+header .content.center {
+  align-content: center;
+}
+header .content.single {
+  font-size: clamp(1.75rem, 2.309vw + 1.152rem, 3rem);
+}
+@media screen and (width < 600px) {
+  header .content {
+    text-align: center;
+  }
+}
+
+.hero-static-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero-static-img.internship {
+  text-align: center;
+  display: grid;
+  gap: 1rem;
+}
+.hero-static-img.internship > div {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.5rem;
+}
+.hero-static-img.internship > div *:not(a) {
+  margin: 0;
+  padding: 0;
+}
+.hero-static-img img {
+  height: 100% !important;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+.hero-static-img.other {
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 nav {
@@ -618,7 +729,7 @@ nav .nav-items svg {
 }
 nav.scrolled {
   position: fixed;
-  background-color: white;
+  background-color: white !important;
   --_color: black;
   --_svg-fill-clr: black;
 }
