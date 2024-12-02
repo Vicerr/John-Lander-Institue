@@ -1,23 +1,3 @@
-// SLIDER ANIMATION ALGORITHIM
-function changeSlide(direction) {
-    const totalSlides = images.length
-
-    // Update index
-    currentIndex = (currentIndex + direction + totalSlides) % totalSlides
-
-    // Update slide position
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`
-}
-
-function startSliderAnimation() {
-    slideInterval = setInterval(() => {
-        changeSlide(1)
-    }, slider.dataset.slideDuration)
-}
-
-function stopSliderAnimation() {
-    clearInterval(slideInterval)
-}
 // function to change the image slide when the user clicks on a button which activates this function
 
 const nav = document.querySelector(".nav-items")

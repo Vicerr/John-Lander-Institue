@@ -46,7 +46,7 @@ body {
 
 header.hero-header {
     position: relative;
-    height: min(100dvh, 800px);
+    min-height: min(100vh, 800px);
 }
 
 @media screen and (max-width: 500px) {
@@ -72,7 +72,7 @@ header.hero-header {
         position: relative;
         display: grid;
         gap: rem(40px);
-        margin-top: rem(10px);
+        margin-top: rem(20px);
 
     }
 
@@ -209,9 +209,10 @@ header.hero-header {
 
 .slider {
     position: absolute;
+    // background-color: red;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     overflow: hidden;
     z-index: -1;
@@ -221,6 +222,7 @@ header.hero-header {
     display: flex;
     width: 100%;
     transition: transform 0.5s ease-in-out;
+    height: 100%;
 
     @media screen and (max-width: 1000px) {
         height: 100%;
@@ -229,7 +231,7 @@ header.hero-header {
 
 .slides img {
     width: 100%;
-    height: 100%;
+    flex: 0 0 100vw;
     display: block;
     object-fit: cover;
 }
@@ -426,6 +428,14 @@ input {
     }
 }
 
+header:has(.internship, .white-nav) {
+    nav {
+        background-color: white;
+        --_color: black;
+        --_svg-fill-clr: black;
+    }
+}
+
 header:has(.internship) {
     height: 100%;
     position: relative;
@@ -456,12 +466,7 @@ header:has(.internship) {
         }
     }
 
-    nav {
-        background-color: white;
-        --_color: black;
-        --_svg-fill-clr: black;
 
-    }
 }
 
 .text-center {
@@ -470,22 +475,32 @@ header:has(.internship) {
 }
 
 header {
+    &.regular {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
     .content {
-        &.center {
-            align-content: center;
+        min-height: min(60vh, 700px);
+        padding-bottom: 3rem;
+        padding-top: 1rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .single-title {
+            font-size: clamp(1.75rem, 2.309vw + 1.152rem, 3rem);
+            font-weight: 700;
         }
 
-        &.single {
-            font-size: clamp(1.75rem, 2.309vw + 1.152rem, 3rem);
-        }
+
 
         color: white;
-        position: relative;
-        bottom: 0;
-        height: 100%;
 
         @media screen and (width < 600px) {
-            text-align: center;
+            min-height: min(50vh, 550px);
+            justify-content: center;
         }
     }
 }
@@ -516,7 +531,7 @@ header {
         height: 100% !important;
         display: block;
         object-fit: cover;
-        // margin-top: -100px;
+        object-position: top;
         width: 100%;
     }
 

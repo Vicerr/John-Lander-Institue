@@ -31,7 +31,7 @@
 </head>
 
 <body>
-    <header class="hero-header">
+    <header class="hero-header regular">
         <nav data-navigation>
             <div class="wrapper container-fluid">
                 <div class="extra">
@@ -151,30 +151,22 @@
                 </ul>
             </div>
         </nav>
-        <section class="hero hero__section container">
-            <div class="hero__intro-text alt">
-                <h2 class="hero__header">Contact Us
-
-                </h2>
+        <div class="content container  center single">
+            <div class="">
+                <h2 class="single-title">Contact Us</h2>
 
             </div>
-        </section>
-        <div class="slider" data-slide-duration="3500">
-
-            <div class="slides">
-                <img src="/assets/images/heroimg (1).jpg" alt="Image 1">
-                <img src="/assets/images/heroimg (2).jpg" alt="Image 2">
-                <img src="/assets/images/heroimg (3).jpg" alt="Image 3">
-                <img src="/assets/images/heroimg (4).jpg" alt="Image 4">
-
-            </div>
-
         </div>
-        <div class="slide-buttons">
-            <button class="arrow left" onclick="changeSlide(-1)">&#10094;</button>
-            <button class="arrow right" onclick="changeSlide(1)">&#10095;</button>
+        <div class="hero-static-img other">
+            <picture>
+                <source media="(min-width: 700px)" srcset="/assets/images/contact-hero-desktop.png">
+                <img src="/assets/images/contact-hero-mobile.png" alt="hero-image" width="430" height="286">
+            </picture>
+
+
         </div>
     </header>
+
 
 
     <section class="contact-form">
