@@ -41,7 +41,8 @@ body {
 
 header.hero-header {
   position: relative;
-  min-height: min(100vh, 800px);
+  padding-bottom: 3rem;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 500px) {
@@ -650,32 +651,26 @@ nav .nav-items .dropdown {
 nav .nav-items .dropdown > div {
   overflow: hidden;
 }
+@media screen and (width < 500px) {
+  nav .nav-items .dropdown > div {
+    padding-block: 0.5rem;
+  }
+}
 @media screen and (width > 500px) {
   nav .nav-items .dropdown {
+    width: 200px;
     border-radius: 0.3125rem;
     top: 100%;
     left: 0;
     position: absolute;
   }
-  nav .nav-items .dropdown > div {
-    padding-block: 0.5rem;
-  }
   nav .nav-items .dropdown a {
-    padding-block: 0.5rem;
-    padding-right: 6.625rem;
+    padding-block: 0.625rem;
+    padding-right: 0.5rem;
   }
 }
 nav .nav-items .dropdown a {
   color: black;
-}
-nav .nav-items [aria-expanded=true] {
-  grid-template-rows: 1fr;
-}
-nav .nav-items [aria-expanded=false] {
-  grid-template-rows: 0fr;
-}
-nav .nav-items [aria-expanded=false] > div {
-  padding-block: 0;
 }
 nav .nav-items .search-bar {
   --_border-clr: #C5C7C7;
@@ -716,7 +711,16 @@ nav .nav-items .search-bar input::-moz-placeholder {
 nav .nav-items .search-bar input::placeholder {
   color: var(--_border-clr);
 }
+nav .nav-items [aria-expanded=false] {
+  grid-template-rows: 0fr;
+}
 @media screen and (width < 500px) {
+  nav .nav-items [aria-expanded=true] {
+    grid-template-rows: 1fr;
+  }
+  nav .nav-items [aria-expanded=false] > div {
+    padding-block: 0;
+  }
   nav .nav-items [data-toggle-searchbar] {
     display: none;
   }

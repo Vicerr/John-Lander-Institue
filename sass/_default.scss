@@ -35,7 +35,6 @@ body {
 
 .container {
     max-width: min(1212px, 90%);
-    // width: 84.16%;
     margin-inline: auto;
 }
 
@@ -46,11 +45,11 @@ body {
 
 header.hero-header {
     position: relative;
-    min-height: min(100vh, 800px);
+    padding-bottom: 3rem;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 500px) {
-
 
     .hero__section {
         bottom: -100px;
@@ -120,7 +119,6 @@ header.hero-header {
             outline: 1px solid transparent;
             font-size: clamp(0.875rem, 0.231vw + 0.815rem, 1rem);
 
-            // flex: 1;
             @media screen and (max-width: 800px) {
                 width: 100%;
                 min-width: unset;

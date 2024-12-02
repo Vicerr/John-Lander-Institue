@@ -74,7 +74,6 @@ nav {
         align-items: center;
         color: white;
         width: 100%;
-        // position: absolute;
         top: 100%;
         z-index: 10000;
 
@@ -140,7 +139,6 @@ nav {
             }
         }
 
-        // list that has the search bar 
         li:has(form) {
             max-width: min(35.694%, 400px);
             width: 100%;
@@ -169,8 +167,6 @@ nav {
 
         .link-dropdown-parent {
             position: relative;
-            // overflow: hidden;
-
 
             @media screen and (width > 500px) {
                 &:hover>.dropdown {
@@ -195,24 +191,28 @@ nav {
             transition: grid-template-rows var(--transition-duration);
             grid-template-rows: 1fr;
 
+
             >div {
                 overflow: hidden;
             }
 
-            @media screen and (width > 500px) {
-                border-radius: rem(5px);
-
+            @media screen and (width < 500px) {
                 >div {
                     padding-block: rem(8px);
                 }
 
+            }
+
+            @media screen and (width > 500px) {
+                width: 200px;
+                border-radius: rem(5px);
                 top: 100%;
                 left: 0;
                 position: absolute;
 
                 a {
-                    padding-block: rem(8px);
-                    padding-right: rem(106px);
+                    padding-block: rem(10px);
+                    padding-right: rem(8px);
                 }
             }
 
@@ -222,17 +222,7 @@ nav {
             }
         }
 
-        [aria-expanded="true"] {
-            grid-template-rows: 1fr;
-        }
 
-        [aria-expanded="false"] {
-            >div {
-                padding-block: 0;
-            }
-
-            grid-template-rows: 0fr;
-        }
 
         .search-bar {
             --_border-clr: #C5C7C7;
@@ -276,7 +266,24 @@ nav {
             }
         }
 
+        [aria-expanded="false"] {
+
+
+            grid-template-rows: 0fr;
+        }
+
         @media screen and (width < 500px) {
+            [aria-expanded="true"] {
+                grid-template-rows: 1fr;
+            }
+
+            [aria-expanded="false"] {
+                >div {
+                    padding-block: 0;
+                }
+
+            }
+
             [data-toggle-searchbar] {
                 display: none;
             }
