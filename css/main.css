@@ -27,6 +27,7 @@ body {
   font-size: 1rem;
   font-family: "Poppins", system-ui, sans-serif;
   background-color: var(--background-clr);
+  overflow-x: hidden;
 }
 
 .container {
@@ -42,7 +43,6 @@ body {
 header.hero-header {
   position: relative;
   padding-bottom: 3rem;
-  overflow: hidden;
 }
 
 @media screen and (max-width: 500px) {
@@ -346,6 +346,7 @@ input {
   justify-items: auto;
   align-items: center;
 }
+
 .contact-misc {
   text-align: center;
   color: var(--text-clr);
@@ -492,7 +493,7 @@ nav {
 nav[data-searchbar-opened=true] {
   background-color: white;
 }
-@media screen and (width < 500px) {
+@media screen and (width < 780px) {
   nav {
     --_color: black;
     background-color: white;
@@ -512,7 +513,7 @@ nav .extra {
   justify-content: space-between;
   align-items: center;
 }
-@media screen and (width > 500px) {
+@media screen and (width > 780px) {
   nav .extra {
     width: -moz-max-content;
     width: max-content;
@@ -527,7 +528,7 @@ nav .wrapper {
   align-items: center;
   padding-block: 0.625rem;
 }
-@media screen and (width < 500px) {
+@media screen and (width < 780px) {
   nav .wrapper {
     align-items: left;
     flex-wrap: wrap;
@@ -555,7 +556,7 @@ nav .nav-items {
   top: 100%;
   z-index: 10000;
 }
-@media screen and (width > 500px) {
+@media screen and (width > 780px) {
   nav .nav-items {
     flex: 1;
   }
@@ -583,7 +584,7 @@ nav .nav-items .dropdown-cta > .cta.alt {
   color: var(--green);
   border: 1px solid var(--green);
 }
-@media screen and (width > 500px) {
+@media screen and (width > 780px) {
   nav .nav-items {
     justify-content: right;
     display: inline-flex;
@@ -593,7 +594,7 @@ nav .nav-items .dropdown-cta > .cta.alt {
     display: none;
   }
 }
-@media screen and (width < 500px) {
+@media screen and (width < 780px) {
   nav .nav-items {
     position: absolute;
     left: 0;
@@ -629,7 +630,7 @@ nav .nav-items[data-searchbar-opened=false] > div > .keep {
 nav .nav-items .link-dropdown-parent {
   position: relative;
 }
-@media screen and (width > 500px) {
+@media screen and (width > 780px) {
   nav .nav-items .link-dropdown-parent:hover > .dropdown {
     display: block;
   }
@@ -651,12 +652,12 @@ nav .nav-items .dropdown {
 nav .nav-items .dropdown > div {
   overflow: hidden;
 }
-@media screen and (width < 500px) {
+@media screen and (width < 780px) {
   nav .nav-items .dropdown > div {
     padding-block: 0.5rem;
   }
 }
-@media screen and (width > 500px) {
+@media screen and (width > 780px) {
   nav .nav-items .dropdown {
     width: 200px;
     border-radius: 0.3125rem;
@@ -714,7 +715,7 @@ nav .nav-items .search-bar input::placeholder {
 nav .nav-items [aria-expanded=false] {
   grid-template-rows: 0fr;
 }
-@media screen and (width < 500px) {
+@media screen and (width < 780px) {
   nav .nav-items [aria-expanded=true] {
     grid-template-rows: 1fr;
   }
@@ -749,7 +750,7 @@ nav.scrolled {
   --_svg-fill-clr: black;
 }
 
-@media screen and (width < 500px) {
+@media screen and (width < 780px) {
   .slide-buttons {
     display: none;
   }
@@ -886,8 +887,10 @@ nav.scrolled {
   padding-block: 3rem;
 }
 .events .wrapper {
-  display: grid;
   gap: 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
 }
 @media screen and (width > 600px) {
   .events .wrapper {
@@ -895,30 +898,53 @@ nav.scrolled {
   }
 }
 
+.event-date {
+  display: flex;
+  gap: 8px;
+  font-size: 14px;
+  align-items: center;
+}
+
 .event-card {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
   text-decoration: none;
   color: inherit;
-  grid-template-rows: 1fr auto;
   min-height: 300px;
 }
-.event-card .event-img-container {
-  max-height: 300px;
-}
-@media screen and (width > 600px) {
-  .event-card .event-img-container {
-    max-height: 370px;
+@media screen and (width < 600px) {
+  .event-card {
+    flex-direction: column;
   }
 }
+@media screen and (width > 600px) {
+  .event-card img {
+    max-width: 250px;
+  }
+  .event-card .event-img-container {
+    max-height: 300px;
+  }
+}
+.event-card .event-img-container {
+  width: 100%;
+  flex: 2;
+}
 .event-card .event-text-container {
-  max-height: 300px;
-  padding-block: 0.625rem;
+  flex: 3;
+  display: grid;
+  gap: 8px;
+}
+.event-card .event-text-container p {
+  margin-block: 0;
 }
 .event-card img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
+  display: block;
 }
 
 .page-divider {
@@ -1358,6 +1384,19 @@ h2 {
   transition: stroke var(--transition-duration) ease-in-out;
 }
 
+.text-align-left {
+  text-align: left;
+}
+
+.courses.page .sub-header {
+  justify-content: center;
+}
+.courses.page p {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
 footer.wrapper {
   font-weight: 400;
   background-color: hsl(144, 100%, 13%);
@@ -1416,16 +1455,20 @@ footer.wrapper h2,
 footer.wrapper p {
   margin: 0;
 }
-
-.text-align-left {
-  text-align: left;
-}
-
-.courses.page .sub-header {
-  justify-content: center;
-}
-.courses.page p {
+footer.wrapper .social-links {
   display: flex;
-  gap: 4px;
-  align-items: center;
+  gap: 8px;
+}
+footer.wrapper .social-links a {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-content: center;
+  background-color: #EBF7ED;
+  text-decoration: none;
+  align-content: center;
+  border-radius: 50%;
+}
+footer.wrapper .social-links a:visited {
+  color: inherit;
 }/*# sourceMappingURL=main.css.map */

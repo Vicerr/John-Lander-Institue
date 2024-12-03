@@ -8,7 +8,7 @@ nav {
 
     }
 
-    @media screen and (width < 500px) {
+    @media screen and (width < $main-breakpoint-width) {
         --_color: black;
         background-color: white;
 
@@ -31,7 +31,7 @@ nav {
         justify-content: space-between;
         align-items: center;
 
-        @media screen and (width > 500px) {
+        @media screen and (width > $main-breakpoint-width) {
             width: max-content;
 
             svg {
@@ -46,7 +46,7 @@ nav {
         align-items: center;
         padding-block: rem(10px);
 
-        @media screen and (width < 500px) {
+        @media screen and (width < $main-breakpoint-width) {
             align-items: left;
             flex-wrap: wrap;
         }
@@ -77,7 +77,7 @@ nav {
         top: 100%;
         z-index: 10000;
 
-        @media screen and (width> 500px) {
+        @media screen and (width> $main-breakpoint-width) {
             flex: 1;
 
             .responsive-nav-wrapper {
@@ -115,7 +115,7 @@ nav {
             }
         }
 
-        @media screen and (width > 500px) {
+        @media screen and (width > $main-breakpoint-width) {
             justify-content: right;
             display: inline-flex;
             color: white;
@@ -125,7 +125,7 @@ nav {
             }
         }
 
-        @media screen and (width < 500px) {
+        @media screen and (width < $main-breakpoint-width) {
             &.display-none {
                 display: none;
             }
@@ -168,7 +168,7 @@ nav {
         .link-dropdown-parent {
             position: relative;
 
-            @media screen and (width > 500px) {
+            @media screen and (width > $main-breakpoint-width) {
                 &:hover>.dropdown {
                     display: block;
                 }
@@ -196,14 +196,14 @@ nav {
                 overflow: hidden;
             }
 
-            @media screen and (width < 500px) {
+            @media screen and (width < $main-breakpoint-width) {
                 >div {
                     padding-block: rem(8px);
                 }
 
             }
 
-            @media screen and (width > 500px) {
+            @media screen and (width > $main-breakpoint-width) {
                 width: 200px;
                 border-radius: rem(5px);
                 top: 100%;
@@ -272,7 +272,7 @@ nav {
             grid-template-rows: 0fr;
         }
 
-        @media screen and (width < 500px) {
+        @media screen and (width < $main-breakpoint-width) {
             [aria-expanded="true"] {
                 grid-template-rows: 1fr;
             }
@@ -324,7 +324,7 @@ nav {
     }
 }
 
-@media screen and (width < 500px) {
+@media screen and (width < $main-breakpoint-width) {
     .slide-buttons {
         display: none;
     }

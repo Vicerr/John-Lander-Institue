@@ -10,6 +10,8 @@
     --transition-duration: .3s;
 }
 
+$main-breakpoint-width: 780px;
+
 *,
 *::before,
 *::after {
@@ -31,6 +33,7 @@ body {
     font-size: 1rem;
     font-family: 'Poppins', system-ui, sans-serif;
     background-color: var(--background-clr);
+    overflow-x: hidden;
 }
 
 .container {
@@ -46,7 +49,6 @@ body {
 header.hero-header {
     position: relative;
     padding-bottom: 3rem;
-    overflow: hidden;
 }
 
 @media screen and (max-width: 500px) {
@@ -378,10 +380,6 @@ input {
     justify-items: auto;
     align-items: center;
 
-    >div {
-        // width: 100%;
-
-    }
 }
 
 .contact-misc {
